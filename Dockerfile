@@ -18,7 +18,8 @@ RUN apt-get update -y && \
         git \
         python3 \
         ffmpeg \
-        python3-pip && \
+        python3-pip
+        
         
         
 COPY bot.sh /root/
