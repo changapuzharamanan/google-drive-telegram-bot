@@ -1,5 +1,6 @@
 FROM ubuntu:20.04
-RUN apt-get install --no-install-recommends -yqq \
+RUN apt-get install -yqq locales  && \ 
+    apt-get install --no-install-recommends -yqq \
         supervisor \
         sudo \
         tzdata \
