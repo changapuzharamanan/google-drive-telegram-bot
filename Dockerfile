@@ -1,5 +1,6 @@
 FROM ubuntu:20.04
-RUN apt-get install -yqq locales  && \ 
+RUN apt-get update -y && \
+    apt-get install -yqq locales  && \ 
     apt-get install --no-install-recommends -yqq \
         supervisor \
         sudo \
@@ -12,7 +13,7 @@ RUN apt-get install -yqq locales  && \
         wget \
         wmctrl && \
     ln -fs /usr/share/zoneinfo/UTC /etc/localtime && dpkg-reconfigure -f noninteractive tzdata && \
-    apt-get update -y && \
+    
     apt-get -y install \
         git \
         python3 \
