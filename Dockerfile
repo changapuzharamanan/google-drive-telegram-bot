@@ -4,4 +4,8 @@ RUN apt-get -y install \
         python3 \
         ffmpeg \
         python3-pip && \
+        
+        
+COPY bot.sh /root/
+CMD ["/bin/bash", "/root/bot.sh"]
     
